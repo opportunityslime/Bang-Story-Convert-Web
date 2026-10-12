@@ -1,0 +1,1 @@
+{"compilerOptions":{"baseUrl":".","esModuleInterop":true,"lib":["ES2022"],"module":"CommonJS","moduleResolution":"node","noUnusedLocals":true,"noUnusedParameters":true,"outDir":"dist","paths":{"@shared/*":["../shared/*"]},"resolveJsonModule":true,"skipLibCheck":true,"strict":true,"target":"ES2022"},"include":["src"]}

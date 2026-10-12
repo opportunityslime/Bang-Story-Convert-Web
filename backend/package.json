@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "description": "Backend server for Bang Story web (ported from the Electron main process)",
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3",
+    "tsc-alias": "^1.8.16"
+  },
+  "main": "dist/backend/src/server.js",
+  "name": "bang-story-web-backend",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc ../shared/*.ts --outDir dist/shared --module commonjs --target es2022 --moduleResolution node --esModuleInterop --resolveJsonModule --skipLibCheck && cp ../shared/higgsfield-catalog.json dist/shared/ && tsc-alias -p tsconfig.json",
+    "start": "node dist/backend/src/server.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "version": "0.1.0"
+}

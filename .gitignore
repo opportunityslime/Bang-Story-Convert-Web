@@ -1,0 +1,21 @@
+# Installed and generated: npm install / npm run build / npm run dist recreate these
+node_modules
+out
+dist
+
+# Release archives belong on GitHub Releases, not in the repo
+*.zip
+
+*.log
+.DS_Store
+.env
+.claude/settings.local.json
+
+# API keys / secrets and local databases must never be committed
+.secret
+*.db
+*.db-shm
+*.db-wal
+
+# Piper TTS voice binaries are downloaded separately (see README).
+backend/resources/piper/

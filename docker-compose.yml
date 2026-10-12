@@ -1,0 +1,16 @@
+services:
+  bang-story:
+    build: .
+    image: bang-story-web
+    container_name: bang-story
+    ports:
+      - "3100:3100"
+    volumes:
+      - bang-story-data:/data
+    environment:
+      - BANG_STORY_DATA=/data
+      - PORT=3100
+    restart: unless-stopped
+
+volumes:
+  bang-story-data:
